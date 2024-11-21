@@ -1,0 +1,534 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #FFD700;
+  --text-dark: #333;
+  --text-light: #fff;
+  --background-transparent: rgba(255, 255, 255, 0.95);
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  min-height: 100vh;
+  background: url('hero-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sections-container {
+  padding-bottom: 80px;
+}
+
+/* Header Styles */
+header {
+    padding: 1.5rem;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    color: var(--text-light);
+    border-radius: 20px; /* Menambahkan sudut bulat */
+    margin: 1rem; /* Menambahkan margin agar tidak menempel di pinggir */
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slide {
+  display: none;
+}
+
+.slide img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.active {
+  display: block;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+}
+
+.slogan {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    header {
+        margin: 0.5rem;
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .slogan {
+        font-size: 1rem;
+    }
+}
+
+/* About Section */
+.about-container {
+  margin: 1rem;
+  padding: 1.5rem;
+  background: var(--background-transparent);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+.about-image img {
+  width: 85%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.about-text h2 {
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.about-text p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+.payment-method {
+  font-family: Arial, sans-serif;
+  margin: 20px 0;
+}
+
+.payment-method h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.payment-method p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.bank-details {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.bank-logo {
+  width: 60px; /* Sesuaikan ukuran logo */
+  height: auto;
+  margin-right: 10px;
+}
+
+
+/* Category Section */
+.category-container {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: var(--background-transparent);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+.category-header {
+    margin-bottom: 2.5rem;
+}
+
+.category-header h2 {
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.category-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: #FFD700;
+    border-radius: 2px;
+}
+
+.category-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.tab-btn {
+  padding: 8px 16px;
+  border: none;
+  background: #ffffff;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+  background: var(--primary-color);
+  color: var(--text-dark);
+}
+
+/* Product Grid Styles */
+.product-grid {
+  display: grid;
+  gap: 12px;
+  padding: 12px;
+  margin: 0 auto;
+}
+
+/* Desktop/Landscape View (4 kolom) */
+@media screen and (min-width: 769px) {
+  .product-grid {
+      grid-template-columns: repeat(4, 1fr);
+      border-radius: 10px;
+      max-width: 1200px;
+  }
+
+  .product-card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .product-image-container {
+      position: relative;
+      padding-top: 100%;
+  }
+
+  .product-info h3 {
+      font-size: 14px;
+      height: 40px;
+  }
+
+  .product-info .price {
+      font-size: 14px;
+  }
+
+  .product-info .details-btn {
+    padding: 8px 0;
+    font-size: 12px;
+    background-color: green; /* Warna latar hijau */
+    color: rgb(9, 230, 9); /* Warna teks putih agar kontras */
+    border: none; /* Opsional, menghapus border jika ada */
+    border-radius: 4px; /* Opsional, memberikan sudut tumpul */
+  }
+}
+
+/* Mobile View (2 kolom) */
+@media screen and (max-width: 768px) {
+  .product-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      padding: 8px;
+  }
+
+  .product-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+
+  .product-image-container {
+      position: relative;
+      border-radius: 10px;
+      padding-top: 75%;
+  }
+
+  .product-info {
+      padding: 6px;
+  }
+
+  .product-info h3 {
+      font-size: 11px;
+      line-height: 1.3;
+      height: 28px;
+      margin-bottom: 4px;
+  }
+
+  .product-info .price {
+      font-size: 11px;
+      margin-bottom: 4px;
+  }
+
+  /* Gaya dasar untuk tombol */
+  .details-btn {
+    padding: 10px 20px;  /* Ruang dalam tombol */
+    font-size: 14px;  /* Ukuran font */
+    background-color: green;  /* Warna latar hijau */
+    color: white;  /* Warna teks putih */
+    border: none;  /* Menghapus border default */
+    border-radius: 5px;  /* Membuat sudut tombol tumpul */
+    cursor: pointer;  /* Ubah kursor saat di-hover */
+    transition: background-color 0.3s ease, transform 0.2s ease;  /* Efek transisi */
+  }
+
+  /* Efek hover */
+  .details-btn:hover {
+    background-color: darkgreen;  /* Warna hijau lebih gelap saat di-hover */
+    transform: scale(1.05);  /* Sedikit memperbesar tombol */
+  }
+
+  /* Efek saat tombol ditekan */
+  .details-btn:active {
+    background-color: rgb(14, 202, 14);  /* Warna hijau lebih tua saat ditekan */
+    transform: scale(0.98);  /* Sedikit memperkecil tombol untuk efek klik */
+  }
+
+  /* Gaya tombol jika dinonaktifkan */
+  .details-btn:disabled {
+    background-color: gray;  /* Warna abu-abu untuk tombol dinonaktifkan */
+    cursor: not-allowed;  /* Kursor default untuk elemen yang tidak bisa diklik */
+    opacity: 0.6;  /* Efek transparan */
+  }
+}
+
+/* Shared Styles */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-3px);
+}
+
+.product-image-container {
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.product-image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.product-info h3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: #333;
+  font-weight: 500;
+}
+
+.product-info .price {
+  color: #e44d26;
+  font-weight: bold;
+}
+
+/* Gaya dasar untuk tombol */
+.details-btn {
+  padding: 10px 20px;  /* Ruang dalam tombol */
+  font-size: 14px;  /* Ukuran font */
+  background-color: rgb(13, 204, 13);  /* Warna latar hijau */
+  color: white;  /* Warna teks putih */
+  border: none;  /* Menghapus border default */
+  border-radius: 7px;  /* Membuat sudut tombol tumpul */
+  cursor: pointer;  /* Ubah kursor saat di-hover */
+  transition: background-color 0.3s ease, transform 0.2s ease;  /* Efek transisi */
+}
+
+/* Efek hover */
+.details-btn:hover {
+  background-color: rgb(0, 197, 0);  /* Warna hijau lebih gelap saat di-hover */
+  transform: scale(1.05);  /* Sedikit memperbesar tombol */
+}
+
+/* Efek saat tombol ditekan */
+.details-btn:active {
+  background-color: forestgreen;  /* Warna hijau lebih tua saat ditekan */
+  transform: scale(0.98);  /* Sedikit memperkecil tombol untuk efek klik */
+}
+
+/* Gaya tombol jika dinonaktifkan */
+.details-btn:disabled {
+  background-color: gray;  /* Warna abu-abu untuk tombol dinonaktifkan */
+  cursor: not-allowed;  /* Kursor default untuk elemen yang tidak bisa diklik */
+  opacity: 0.6;  /* Efek transparan */
+}
+
+
+/* Testimonial Section */
+.testimonial-container {
+  margin: 1rem;
+  padding: 1.5rem;
+}
+
+.testimonial-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.testimonial-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+/* Contact Section */
+.contact-container {
+  margin: 1rem;
+  padding: 1.5rem;
+  background: var(--background-transparent);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.contact-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text-dark);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+}
+
+.contact-card i {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.map {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 1.5rem;
+}
+
+.map iframe {
+  width: 100%;
+  height: 300px;
+}
+
+/* Section Styles */
+.section {
+  display: none;
+  min-height: calc(100vh - 70px); /* tinggi viewport dikurangi tinggi footer */
+  padding: 20px;
+  animation: fadeIn 0.3s ease;
+}
+
+.section.active {
+  display: block;
+}
+
+/* Footer Navigation Styles */
+.footer-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+}
+
+.footer-nav a {
+  flex: 1;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.footer-nav a:last-child {
+  border-right: none;
+}
+
+.footer-nav i {
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+}
+
+.footer-nav span {
+  font-size: 12px;
+}
+
+.footer-nav .active {
+  background-color: #FFD700;
+  color: #000;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .footer-nav i {
+      font-size: 1.2rem;
+  }
+  
+  .footer-nav span {
+      font-size: 10px;
+  }
+}

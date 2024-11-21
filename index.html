@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SultanHomeDeco</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Sections Container -->
+    <div class="sections-container">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <header>
+                <h2>Sultan Home Deco</h2>
+                <p class="slogan">Keindahan Furniture Jepara untuk Rumah Anda</p>
+                <main>
+                    <div class="slider">
+                        <div class="slide">
+                            <img src="Furniture1.png" alt="Furniture 1">
+                        </div>
+                        <div class="slide">
+                            <img src="Furniture2.png" alt="Furniture 2">
+                        </div>
+                        <div class="slide">
+                            <img src="Furniture3.png" alt="Furniture 3">
+                        </div>
+                    </div>
+                </main>
+            </header>
+        </section>
+        
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="about.jpg" alt="SultanHomeDeco">
+                </div>
+                <div class="about-text">
+                    <h2>Tentang Kami</h2>
+                    <p>Selamat datang di SultanHomeDeco, mitra terbaik Anda dalam menghadirkan furniture Jepara yang memadukan keindahan, fungsionalitas, dan kualitas unggul. Kami berdedikasi untuk memberikan solusi furniture terbaik untuk setiap ruang di rumah Anda, dari ruang tamu yang nyaman hingga ruang makan yang elegan.</p>
+                    <p>Didukung oleh keahlian para pengrajin lokal, kami menawarkan produk-produk berbahan dasar kayu terbaik dengan sentuhan desain yang modern dan klasik. Setiap produk kami dibuat dengan perhatian terhadap detail, menjamin daya tahan dan estetika yang memukau.</p>
+                    <p>Apapun gaya dan kebutuhan Anda, kami siap membantu. Untuk produk custom, hubungi kami melalui WhatsApp, dan wujudkan furniture impian Anda bersama SultanHomeDeco.</p>
+                    <div class="payment-method">
+                        <h3>Payment Method</h3>
+                        <div class="bank-details">
+                            <img src="bca.jpeg" alt="BCA Logo" class="bank-logo">
+                        <p>Bank Name: Akhmad Jefri</p>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Category Section -->
+        <section id="category" class="section">
+          <div class="category-container">
+              <div class="category-header">
+                  <h2>Kategori Produk</h2>
+                </div>
+              <div class="category-tabs">
+                  <button class="tab-btn active" data-category="mejamakan">Meja Makan</button>
+                  <button class="tab-btn" data-category="kamarset">Kamar Set</button>
+                  <button class="tab-btn" data-category="almari">Almari</button>
+                  <button class="tab-btn" data-category="sofa">Sofa Set</button>
+              </div>
+              <div class="product-grid">
+                  <!-- Product cards will be dynamically loaded here -->
+              </div>
+          </div>
+      </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="contact-container">
+                <h2>Hubungi Kami</h2>
+                <div class="bank-details">
+                    <img src="bca.jpeg" alt="BCA Logo" class="bank-logo">
+                <p>Bank Name: Akhmad Jefri</p>
+               </div>
+                <div class="contact-info">
+                    <a href="https://wa.me/+6282240219160" class="contact-card">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="https://instagram.com/sultanhomedeco_" class="contact-card">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                    </div>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4434.405064396667!2d110.69519720639767!3d-6.626265482318825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e711f1a6c73d82b%3A0x97a93a6e2a676b29!2sThe%20Shelter%20Billiard!5e0!3m2!1sid!2sid!4v1732046381740!5m2!1sid!2sid" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer Navigation -->
+    <nav class="footer-nav">
+        <a href="#home" class="nav-link active" data-section="home">
+            <i class="fas fa-home"></i><span>Home</span>
+        </a>
+        <a href="#about" class="nav-link" data-section="about">
+            <i class="fas fa-info-circle"></i><span>About Us</span>
+        </a>
+        <a href="#category" class="nav-link" data-section="category">
+            <i class="fas fa-th-large"></i><span>Category</span>
+        </a>
+        <a href="#contact" class="nav-link" data-section="contact">
+            <i class="fas fa-phone"></i><span>Contact</span>
+        </a>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
