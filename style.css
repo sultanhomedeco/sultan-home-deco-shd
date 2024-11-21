@@ -312,6 +312,20 @@ h1 {
   }
 }
 
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    padding: 10px;
+  }
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
 /* Shared Styles */
 .product-card {
   display: flex;
