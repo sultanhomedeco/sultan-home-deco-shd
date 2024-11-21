@@ -209,10 +209,10 @@ h1 {
 /* Desktop/Landscape View (4 kolom) */
 @media screen and (min-width: 769px) {
   .product-grid {
-      grid-template-columns: repeat(4, 1fr);
-      border-radius: 10px;
-      max-width: 1200px;
-  }
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
 
   .product-card {
       background: white;
@@ -286,6 +286,12 @@ h1 {
       padding: 10px;
     }
   }
+
+  img, .slide img {
+    max-width: 100%;
+    height: auto;
+}
+
   
 
   /* Gaya dasar untuk tombol */
